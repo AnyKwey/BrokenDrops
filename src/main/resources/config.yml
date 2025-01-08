@@ -1,0 +1,9 @@
+plugin: true
+enable: true
+prefix: "&8[&3Broken&eDrops&8] "
+
+start-message: "&aThe Plugin is enabled."
+close-message: "&cThe Plugin is disabled."
+
+full-message: "&cYour inventory is full!"
+sound: ENTITY_VILLAGER_NO
