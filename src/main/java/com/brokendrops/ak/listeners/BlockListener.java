@@ -24,7 +24,7 @@ public class BlockListener implements Listener {
 
             e.setDropItems(false);
 
-            ItemStack item;
+            ItemStack item = null;
             switch (block.getType()) {
                 /**
                  * Ore
@@ -81,6 +81,9 @@ public class BlockListener implements Listener {
                 case DEEPSLATE_COPPER_ORE:
                     item = new ItemStack(Material.COPPER_INGOT, 1);
                     break;
+                case STONE:
+                    item = new ItemStack(Material.COBBLESTONE, 1);
+                    break;
 
                 /**
                  * Plants
@@ -94,11 +97,7 @@ public class BlockListener implements Listener {
                 case BROWN_MUSHROOM_BLOCK:
                     item = new ItemStack(Material.BROWN_MUSHROOM, 1);
                     break;
-                case WHEAT:
-                    item = new ItemStack(Material.WHEAT, 1);
-                    item = new ItemStack(Material.WHEAT_SEEDS, 2);
-                    break;
-                case OAK_SAPLING:
+                case OAK_LEAVES:
                     Material[] items = {
                             Material.APPLE,
                             Material.STICK,
@@ -109,12 +108,80 @@ public class BlockListener implements Listener {
                     Material chosenItem = items[random.nextInt(items.length)];
 
                     item = new ItemStack(chosenItem, 1);
-                        break;
+                    break;
+                case SPRUCE_LEAVES:
+                    Material[] items1 = {
+                            Material.APPLE,
+                            Material.STICK,
+                            Material.SPRUCE_SAPLING
+                    };
 
+                    Random random1 = new Random();
+                    Material chosenItem1 = items1[random1.nextInt(items1.length)];
 
-                /**
-                 * Other
-                 */
+                    item = new ItemStack(chosenItem1, 1);
+                    break;
+                case BIRCH_LEAVES:
+                    Material[] items2 = {
+                            Material.APPLE,
+                            Material.STICK,
+                            Material.BIRCH_SAPLING
+                    };
+
+                    Random random2 = new Random();
+                    Material chosenItem2 = items2[random2.nextInt(items2.length)];
+
+                    item = new ItemStack(chosenItem2, 1);
+                    break;
+                case JUNGLE_LEAVES:
+                    Material[] items3 = {
+                            Material.APPLE,
+                            Material.STICK,
+                            Material.JUNGLE_SAPLING
+                    };
+
+                    Random random3 = new Random();
+                    Material chosenItem3 = items3[random3.nextInt(items3.length)];
+
+                    item = new ItemStack(chosenItem3, 1);
+                    break;
+                case ACACIA_LEAVES:
+                    Material[] items4 = {
+                            Material.APPLE,
+                            Material.STICK,
+                            Material.ACACIA_SAPLING
+                    };
+
+                    Random random4 = new Random();
+                    Material chosenItem4 = items4[random4.nextInt(items4.length)];
+
+                    item = new ItemStack(chosenItem4, 1);
+                    break;
+                case DARK_OAK_LEAVES:
+                    Material[] items5 = {
+                            Material.APPLE,
+                            Material.STICK,
+                            Material.DARK_OAK_SAPLING
+                    };
+
+                    Random random5 = new Random();
+                    Material chosenItem5 = items5[random5.nextInt(items5.length)];
+
+                    item = new ItemStack(chosenItem5, 1);
+                    break;
+                case MANGROVE_LEAVES:
+                    Material[] items6 = {
+                            Material.APPLE,
+                            Material.STICK,
+                            Material.MANGROVE_LEAVES
+                    };
+
+                    Random random6 = new Random();
+                    Material chosenItem6 = items6[random6.nextInt(items6.length)];
+
+                    item = new ItemStack(chosenItem6, 1);
+                    break;
+
                 default:
                     item = new ItemStack(block.getType(), 1);
                     break;
