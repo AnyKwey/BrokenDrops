@@ -1,4 +1,4 @@
+main: com.brokendrops.ak.Main
 name: BrokenDrops
 version: '2'
-main: com.brokendrops.ak.Main
 api-version: '1.20'

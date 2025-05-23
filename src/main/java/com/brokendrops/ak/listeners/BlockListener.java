@@ -10,6 +10,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Random;
+
 public class BlockListener implements Listener {
 
     @EventHandler
@@ -83,7 +85,7 @@ public class BlockListener implements Listener {
                 /**
                  * Plants
                  */
-                case GRASS:
+                case TALL_GRASS:
                     item = new ItemStack(Material.WHEAT_SEEDS, 1);
                     break;
                 case RED_MUSHROOM_BLOCK:
@@ -92,6 +94,23 @@ public class BlockListener implements Listener {
                 case BROWN_MUSHROOM_BLOCK:
                     item = new ItemStack(Material.BROWN_MUSHROOM, 1);
                     break;
+                case WHEAT:
+                    item = new ItemStack(Material.WHEAT, 1);
+                    item = new ItemStack(Material.WHEAT_SEEDS, 2);
+                    break;
+                case OAK_SAPLING:
+                    Material[] items = {
+                            Material.APPLE,
+                            Material.STICK,
+                            Material.OAK_SAPLING
+                    };
+
+                    Random random = new Random();
+                    Material chosenItem = items[random.nextInt(items.length)];
+
+                    item = new ItemStack(chosenItem, 1);
+                        break;
+
 
                 /**
                  * Other
